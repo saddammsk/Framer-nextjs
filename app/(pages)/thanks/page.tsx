@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import confetti from "canvas-confetti";
 
-export default function Page() {
+export default function ThanksPage() {
      const [copied, setCopied] = useState(false);
      const textToCopy = "https://runexo.ai/";
 
@@ -25,7 +25,6 @@ export default function Page() {
                colors: ["#ff0a54", "#ff477e", "#ff7096", "#ff85a1", "#fbb1bd", "#a7c957", "#00bbf9", "#4361ee"],
           });
      }, []);
-     const pad = (n: number) => n.toString().padStart(2, "0");
      const [position, setPosition] = useState({ x: 0, y: 0 });
 
      useEffect(() => {
@@ -57,10 +56,10 @@ export default function Page() {
                          alt=""
                     />
                     <h2 className="md:text-[40px] text-[32px] md:max-w-[400px] w-full max-w-[300px] mb-2.5 mx-auto dark:text-white text-black-1300 font-medium tracking-[-1.6px] md:leading-12 leading-10">
-                         You're on the waitlist
+                         {"You're on the waitlist"}
                     </h2>
                     <p className="text-gray-1000 text-[15px] font-normal">
-                         You've successfully secured your spot. Excited? <br /> Feel free to
+                         {"You've"} successfully secured your spot. Excited? <br /> Feel free to
                          refer your friends!
                     </p>
 

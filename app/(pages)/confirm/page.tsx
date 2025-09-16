@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import confetti from "canvas-confetti";
 
-export default function page() {
+export default function Confirmpage() {
      const [copied, setCopied] = useState(false);
      const textToCopy = "https://runexo.ai/";
 
@@ -25,7 +25,6 @@ export default function page() {
                colors: ["#ff0a54", "#ff477e", "#ff7096", "#ff85a1", "#fbb1bd", "#a7c957", "#00bbf9", "#4361ee"],
           });
      }, []);
-     const pad = (n: number) => n.toString().padStart(2, "0");
      const [position, setPosition] = useState({ x: 0, y: 0 });
 
      useEffect(() => {
@@ -52,8 +51,8 @@ export default function page() {
                </div>
                <div className="max-w-[498px] text-center w-full mx-auto md:px-5 px-4">
                     <img src="images/logo.png" className="inline-block mb-6 w-12 h-12 rounded-xl" alt="" />
-                    <h2 className="md:text-[40px] text-[32px] md:max-w-[300px] w-full max-w-[300px] mb-2.5 mx-auto dark:text-white text-black-1300 font-medium tracking-[-1.6px] md:leading-12 leading-10">Your email has been confirmed</h2>
-                    <p className="text-gray-1000 text-[15px] font-normal">You've successfully secured your spot. Excited? <br></br> Feel free to refer your friends!</p>
+                    <h2 className="md:text-[40px] text-[32px] md:max-w-[300px] w-full max-w-[300px] mb-2.5 mx-auto dark:text-white text-black-1300 font-medium tracking-[-1.6px] md:leading-12 leading-10">{"Your email has been confirmed"}</h2>
+                    <p className="text-gray-1000 text-[15px] font-normal"> {"You've"} successfully secured your spot. Excited? <br></br> Feel free to refer your friends!</p>
                     <div className="relative transition-all ease-in-out duration-500 hover:shadow-4xl mt-6 dark:bg-black-1100 text-[15px] font-normal text-gray-1000 flex items-center justify-between p-2.5 border dark:border-gray-1100 border-gray-1300 bg-gray-1200 rounded-[12px]">
                          {copied ? "Copied URL" : textToCopy}
                          <button onClick={handleCopy}>
