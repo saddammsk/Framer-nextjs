@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@theme {
+  --font-inter: "inter";
+  --shadow-3xl: inset 0px 1px 0px 0px #ffffff12;
+  --shadow-4xl: 0px 0px 0px 2px #ffffff12;
+  --color-black-1000: #0d0d0d;
+  --color-black-1100: #141414;
+  --color-black-1200: #212121;
+  --color-black-1300: #121212;
+  --color-white-1000: #ffffff12;
+  --color-blue-1000: #325fec;
+  --color-gray-1000: #7e7e7e;
+  --color-gray-1100: #171717;
+  --color-gray-1200: #F8F8F8;
+  --color-gray-1300: #F2F2F2;
+  --color-gray-1400: #FAFAFA;
+  --color-gray-1500: #E3E3E3;
+  --color-yellow-1000: #b1cc00;
+  --color-white-1200: #ffffff4d;
+  --breakpoint-sm: 575px;
+  --breakpoint-md: 767px;
+  --breakpoint-lg: 991px;
+  --breakpoint-xl: 1199px;
+  --breakpoint-2xl: 1365px;
+  --breakpoint-3xl: 1700px;
+}
+
+.ripple {
+  background-color: rgba(21, 134, 248, 0.6);
+  position: absolute;
+  animation: rippleWave 1.5s infinite;
+}
+
+@keyframes rippleWave {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+
+  70% {
+    transform: scale(3);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+button,
+a,
+input {
+  cursor: none;
+}
+
+.dark .radial-gradient {
+  --angle: 0deg;
+  background: conic-gradient(from var(--angle),
+      rgb(38, 92, 252) 0,
+      #171717 32.5deg,
+      #171717 327.5deg,
+      rgb(38, 92, 252) 360deg);
+  animation: rotateAngle 3s linear infinite;
+}
+
+.radial-gradient {
+  animation: rotateAngle 3s linear infinite;
+}
+
+.radial-gradient {
+  --radial-bg: #f2f2f2;
+}
+
+@media (prefers-color-scheme: dark) {
+  .radial-gradient {
+    --radial-bg: #171717;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp2 {
+  0% {
+    transform: translateY(5px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
